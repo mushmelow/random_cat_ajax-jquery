@@ -4,7 +4,9 @@ $("#btn").click(function(){
   .done(function(data){
    console.log(data.file)
    $("#photo").attr("src", data.file)
-   
  })
+  .fail(function(){
+  	alert("request failed!!")
+  })
 })
 
